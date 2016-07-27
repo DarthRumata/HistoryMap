@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		92116D541D3D824700083AB4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92116D531D3D824700083AB4 /* AppState.swift */; };
 		92116D561D3D845300083AB4 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92116D551D3D845300083AB4 /* AppReducer.swift */; };
+		921BBB261D49397000B85416 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 921BBB251D49397000B85416 /* GoogleService-Info.plist */; };
 		922EC0601D3C1AD20071A29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922EC05F1D3C1AD20071A29F /* AppDelegate.swift */; };
 		922EC0651D3C1AD20071A29F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922EC0631D3C1AD20071A29F /* Main.storyboard */; };
 		922EC0671D3C1AD20071A29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922EC0661D3C1AD20071A29F /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		92116D531D3D824700083AB4 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		92116D551D3D845300083AB4 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		921BBB251D49397000B85416 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		922EC05C1D3C1AD20071A29F /* HistoryMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HistoryMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922EC05F1D3C1AD20071A29F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		922EC0641D3C1AD20071A29F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 		922EC0741D3C20190071A29F /* Supporting files */ = {
 			isa = PBXGroup;
 			children = (
+				921BBB251D49397000B85416 /* GoogleService-Info.plist */,
 				922EC06B1D3C1AD20071A29F /* Info.plist */,
 			);
 			path = "Supporting files";
@@ -141,12 +144,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 922EC06E1D3C1AD20071A29F /* Build configuration list for PBXNativeTarget "HistoryMap" */;
 			buildPhases = (
-				E62A36AF329616EB37DF9023 /* 📦 Check Pods Manifest.lock */,
+				E62A36AF329616EB37DF9023 /* [CP] Check Pods Manifest.lock */,
 				922EC0581D3C1AD20071A29F /* Sources */,
 				922EC0591D3C1AD20071A29F /* Frameworks */,
 				922EC05A1D3C1AD20071A29F /* Resources */,
-				893EAC2BC235CDA22A1FF269 /* 📦 Embed Pods Frameworks */,
-				0A200CF7DA1A20F713EB4348 /* 📦 Copy Pods Resources */,
+				893EAC2BC235CDA22A1FF269 /* [CP] Embed Pods Frameworks */,
+				0A200CF7DA1A20F713EB4348 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -197,6 +200,7 @@
 			files = (
 				922EC06A1D3C1AD20071A29F /* LaunchScreen.storyboard in Resources */,
 				922EC0671D3C1AD20071A29F /* Assets.xcassets in Resources */,
+				921BBB261D49397000B85416 /* GoogleService-Info.plist in Resources */,
 				922EC0651D3C1AD20071A29F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -204,14 +208,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A200CF7DA1A20F713EB4348 /* 📦 Copy Pods Resources */ = {
+		0A200CF7DA1A20F713EB4348 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Copy Pods Resources";
+			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,14 +223,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HistoryMap/Pods-HistoryMap-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		893EAC2BC235CDA22A1FF269 /* 📦 Embed Pods Frameworks */ = {
+		893EAC2BC235CDA22A1FF269 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Embed Pods Frameworks";
+			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -234,14 +238,14 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HistoryMap/Pods-HistoryMap-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E62A36AF329616EB37DF9023 /* 📦 Check Pods Manifest.lock */ = {
+		E62A36AF329616EB37DF9023 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "📦 Check Pods Manifest.lock";
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -324,7 +328,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -363,7 +367,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

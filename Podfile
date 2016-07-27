@@ -7,6 +7,7 @@ target 'HistoryMap' do
 
   # Pods for HistoryMap
   pod 'Mapbox-iOS-SDK', '~> 3.3.0'
-  pod 'ReSwift’, ‘2.0.0’
+  pod 'ReSwift’, '2.0.0'
+  pod 'Firebase', '3.3.0'
 
 end
