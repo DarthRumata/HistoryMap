@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Mapbox
 
-class ViewController: UIViewController {
+class MapViewController: UIViewController {
+
+  @IBOutlet weak var mapView: MGLMapView!
 
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -22,6 +22,8 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>MGLMapboxAccessToken</key>
+	<string>pk.eyJ1IjoicnVtYXRhIiwiYSI6IjQ0MDk3OWQwZjkxNWUyY2ZmZmJjOTU3MTVlN2VlNDY0In0.trxeiZA3PrtvBewLUvdM8w</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

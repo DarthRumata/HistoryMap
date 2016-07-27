@@ -1,0 +1,15 @@
+PODS:
+  - Mapbox-iOS-SDK (3.3.0)
+  - ReSwift (2.0.0)
+
+DEPENDENCIES:
+  - Mapbox-iOS-SDK (~> 3.3.0)
+  - ReSwift (= 2.0.0)
+
+SPEC CHECKSUMS:
+  Mapbox-iOS-SDK: 88171e67d043af5ba80f52bcbf5dd31478652c18
+  ReSwift: 7abc536a87955c34bf60de3fd32ce9a02ee3ad87
+
+PODFILE CHECKSUM: 9e2d59f6eff8c30790099e29f845846af990fb1e
+
+COCOAPODS: 1.0.0
