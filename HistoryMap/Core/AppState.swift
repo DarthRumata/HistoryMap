@@ -11,5 +11,7 @@ import ReSwift
 
 struct AppState: StateType {
 
+  var historyEvents: [HistoryEvent]
+  let locator: ServiceLocator = ServiceLocator()
 
 }

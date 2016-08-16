@@ -8,6 +8,7 @@
 
 import UIKit
 import Mapbox
+import ReSwift
 
 class MapViewController: UIViewController {
 
@@ -15,7 +16,22 @@ class MapViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
+
+    store.subscribe(self)
+
+    store.dispatch(FetchHistoryEventsOperation.perform)
+  }
+
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+
+    store.subscribe(self)
+  }
+
+  override func viewWillDisappear(animated: Bool) {
+    super.viewWillDisappear(animated)
+
+    store.unsubscribe(self)
   }
 
   override func didReceiveMemoryWarning() {
@@ -24,5 +40,24 @@ class MapViewController: UIViewController {
   }
 
 
+}
+
+extension MapViewController: StoreSubscriber {
+
+
+  func newState(state: AppState) {
+    if let annotations = mapView.annotations {
+      mapView.removeAnnotations(annotations)
+    }
+
+    for event in state.historyEvents {
+      var event = event
+      let annotation = MGLPointAnnotation()
+      annotation.coordinate = event.coordinate
+      annotation.title = event.description
+      mapView.addAnnotation(annotation)
+    }
+  }
+  
 }
 

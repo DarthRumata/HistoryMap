@@ -12,7 +12,21 @@ import ReSwift
 struct AppReducer: Reducer {
 
   func handleAction(action: Action, state: AppState?) -> AppState {
-    return state ?? AppState()
+    var state = state ?? AppState(historyEvents: [])
+
+    switch action {
+    case let action as AddServiceAction:
+      state.locator.registerService(action.service)
+
+    case let action as SetHistoryEvents:
+      state.historyEvents.removeAll()
+      state.historyEvents.appendContentsOf(action.events)
+
+    default:
+      break
+    }
+
+    return state
   }
 
 }

@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9201B1A01D61008F00E9EEE5 /* FetchHistoryEventsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201B19F1D61008F00E9EEE5 /* FetchHistoryEventsOperation.swift */; };
+		9201B1A21D6102EC00E9EEE5 /* ServiceLocator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201B1A11D6102EC00E9EEE5 /* ServiceLocator.swift */; };
+		9201B1A41D6103A700E9EEE5 /* AddServiceAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201B1A31D6103A700E9EEE5 /* AddServiceAction.swift */; };
+		9201B1A61D610B9800E9EEE5 /* SetHistoryEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9201B1A51D610B9800E9EEE5 /* SetHistoryEvents.swift */; };
 		92116D541D3D824700083AB4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92116D531D3D824700083AB4 /* AppState.swift */; };
 		92116D561D3D845300083AB4 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92116D551D3D845300083AB4 /* AppReducer.swift */; };
+		921B36541D57962A002DA3B2 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B36531D57962A002DA3B2 /* FirebaseService.swift */; };
+		921B36561D57963C002DA3B2 /* HistoryEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921B36551D57963C002DA3B2 /* HistoryEvent.swift */; };
 		921BBB261D49397000B85416 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 921BBB251D49397000B85416 /* GoogleService-Info.plist */; };
 		922EC0601D3C1AD20071A29F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922EC05F1D3C1AD20071A29F /* AppDelegate.swift */; };
 		922EC0651D3C1AD20071A29F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922EC0631D3C1AD20071A29F /* Main.storyboard */; };
@@ -19,8 +25,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9201B19F1D61008F00E9EEE5 /* FetchHistoryEventsOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FetchHistoryEventsOperation.swift; sourceTree = "<group>"; };
+		9201B1A11D6102EC00E9EEE5 /* ServiceLocator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServiceLocator.swift; sourceTree = "<group>"; };
+		9201B1A31D6103A700E9EEE5 /* AddServiceAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddServiceAction.swift; sourceTree = "<group>"; };
+		9201B1A51D610B9800E9EEE5 /* SetHistoryEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetHistoryEvents.swift; sourceTree = "<group>"; };
 		92116D531D3D824700083AB4 /* AppState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		92116D551D3D845300083AB4 /* AppReducer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		921B36531D57962A002DA3B2 /* FirebaseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
+		921B36551D57963C002DA3B2 /* HistoryEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryEvent.swift; sourceTree = "<group>"; };
 		921BBB251D49397000B85416 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		922EC05C1D3C1AD20071A29F /* HistoryMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HistoryMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		922EC05F1D3C1AD20071A29F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +58,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9201B19D1D61006D00E9EEE5 /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				9201B19F1D61008F00E9EEE5 /* FetchHistoryEventsOperation.swift */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		9201B19E1D61007B00E9EEE5 /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+				9201B1A31D6103A700E9EEE5 /* AddServiceAction.swift */,
+				9201B1A51D610B9800E9EEE5 /* SetHistoryEvents.swift */,
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		921B36511D57962A002DA3B2 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				921B36551D57963C002DA3B2 /* HistoryEvent.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		921B36521D57962A002DA3B2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				921B36531D57962A002DA3B2 /* FirebaseService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		922EC0531D3C1AD20071A29F = {
 			isa = PBXGroup;
 			children = (
@@ -89,8 +134,13 @@
 		922EC0721D3C1FF90071A29F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9201B19E1D61007B00E9EEE5 /* Actions */,
+				9201B19D1D61006D00E9EEE5 /* Operations */,
+				921B36511D57962A002DA3B2 /* Models */,
+				921B36521D57962A002DA3B2 /* Services */,
 				92116D531D3D824700083AB4 /* AppState.swift */,
 				92116D551D3D845300083AB4 /* AppReducer.swift */,
+				9201B1A11D6102EC00E9EEE5 /* ServiceLocator.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -262,8 +312,14 @@
 			files = (
 				922EC0791D3C376D0071A29F /* MapViewController.swift in Sources */,
 				92116D541D3D824700083AB4 /* AppState.swift in Sources */,
+				9201B1A01D61008F00E9EEE5 /* FetchHistoryEventsOperation.swift in Sources */,
 				92116D561D3D845300083AB4 /* AppReducer.swift in Sources */,
+				9201B1A21D6102EC00E9EEE5 /* ServiceLocator.swift in Sources */,
+				921B36541D57962A002DA3B2 /* FirebaseService.swift in Sources */,
+				9201B1A41D6103A700E9EEE5 /* AddServiceAction.swift in Sources */,
 				922EC0601D3C1AD20071A29F /* AppDelegate.swift in Sources */,
+				9201B1A61D610B9800E9EEE5 /* SetHistoryEvents.swift in Sources */,
+				921B36561D57963C002DA3B2 /* HistoryEvent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
