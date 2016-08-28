@@ -11,5 +11,6 @@ target 'HistoryMap' do
   pod 'Firebase', '3.3.0'
   pod 'Firebase/Database', '3.3.0'
   pod 'ObjectMapper', '~> 1.3'
+  pod 'ReSwiftRouter', '0.3.0'
 
 end

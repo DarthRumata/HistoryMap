@@ -9,6 +9,7 @@
 import UIKit
 import Mapbox
 import ReSwift
+import ReSwiftRouter
 
 class MapViewController: UIViewController {
 
@@ -60,4 +61,3 @@ extension MapViewController: StoreSubscriber {
   }
   
 }
-

@@ -21,6 +21,10 @@
 		922EC0671D3C1AD20071A29F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 922EC0661D3C1AD20071A29F /* Assets.xcassets */; };
 		922EC06A1D3C1AD20071A29F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 922EC0681D3C1AD20071A29F /* LaunchScreen.storyboard */; };
 		922EC0791D3C376D0071A29F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 922EC0781D3C376D0071A29F /* MapViewController.swift */; };
+		9240A1811D72F7890014F0EA /* RootRoutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240A1801D72F7890014F0EA /* RootRoutable.swift */; };
+		9240A1841D72FDAD0014F0EA /* Routes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240A1831D72FDAD0014F0EA /* Routes.swift */; };
+		9240A1861D7311660014F0EA /* MapRoutableSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240A1851D7311660014F0EA /* MapRoutableSegment.swift */; };
+		9240A1881D7312DE0014F0EA /* RoutableSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9240A1871D7312DE0014F0EA /* RoutableSegment.swift */; };
 		C76D5BBBF103708DF9562DD3 /* Pods_HistoryMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FF5D1FFB0581E4DB6567CADA /* Pods_HistoryMap.framework */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +45,10 @@
 		922EC0691D3C1AD20071A29F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		922EC06B1D3C1AD20071A29F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		922EC0781D3C376D0071A29F /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		9240A1801D72F7890014F0EA /* RootRoutable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RootRoutable.swift; path = HistoryMap/Core/RootRoutable.swift; sourceTree = SOURCE_ROOT; };
+		9240A1831D72FDAD0014F0EA /* Routes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Routes.swift; sourceTree = "<group>"; };
+		9240A1851D7311660014F0EA /* MapRoutableSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapRoutableSegment.swift; sourceTree = "<group>"; };
+		9240A1871D7312DE0014F0EA /* RoutableSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoutableSegment.swift; sourceTree = "<group>"; };
 		D3A1E478A8121B3DEA318EFB /* Pods-HistoryMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HistoryMap.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HistoryMap/Pods-HistoryMap.debug.xcconfig"; sourceTree = "<group>"; };
 		E3B202EED527AA53384EF44D /* Pods-HistoryMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HistoryMap.release.xcconfig"; path = "Pods/Target Support Files/Pods-HistoryMap/Pods-HistoryMap.release.xcconfig"; sourceTree = "<group>"; };
 		FF5D1FFB0581E4DB6567CADA /* Pods_HistoryMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HistoryMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,6 +142,7 @@
 		922EC0721D3C1FF90071A29F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				9240A1821D72F7A10014F0EA /* Routing */,
 				9201B19E1D61007B00E9EEE5 /* Actions */,
 				9201B19D1D61006D00E9EEE5 /* Operations */,
 				921B36511D57962A002DA3B2 /* Models */,
@@ -168,6 +177,17 @@
 				922EC0781D3C376D0071A29F /* MapViewController.swift */,
 			);
 			path = Map;
+			sourceTree = "<group>";
+		};
+		9240A1821D72F7A10014F0EA /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				9240A1801D72F7890014F0EA /* RootRoutable.swift */,
+				9240A1831D72FDAD0014F0EA /* Routes.swift */,
+				9240A1851D7311660014F0EA /* MapRoutableSegment.swift */,
+				9240A1871D7312DE0014F0EA /* RoutableSegment.swift */,
+			);
+			path = Routing;
 			sourceTree = "<group>";
 		};
 		BA3D3B97C63BAB23EA295906 /* Frameworks */ = {
@@ -222,6 +242,7 @@
 				TargetAttributes = {
 					922EC05B1D3C1AD20071A29F = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 4GS5NBU7N5;
 					};
 				};
 			};
@@ -317,9 +338,13 @@
 				9201B1A21D6102EC00E9EEE5 /* ServiceLocator.swift in Sources */,
 				921B36541D57962A002DA3B2 /* FirebaseService.swift in Sources */,
 				9201B1A41D6103A700E9EEE5 /* AddServiceAction.swift in Sources */,
+				9240A1841D72FDAD0014F0EA /* Routes.swift in Sources */,
+				9240A1811D72F7890014F0EA /* RootRoutable.swift in Sources */,
+				9240A1861D7311660014F0EA /* MapRoutableSegment.swift in Sources */,
 				922EC0601D3C1AD20071A29F /* AppDelegate.swift in Sources */,
 				9201B1A61D610B9800E9EEE5 /* SetHistoryEvents.swift in Sources */,
 				921B36561D57963C002DA3B2 /* HistoryEvent.swift in Sources */,
+				9240A1881D7312DE0014F0EA /* RoutableSegment.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,6 +460,7 @@
 			baseConfigurationReference = D3A1E478A8121B3DEA318EFB /* Pods-HistoryMap.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "HistoryMap/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = darkmatter.com.HistoryMap;
@@ -447,6 +473,7 @@
 			baseConfigurationReference = E3B202EED527AA53384EF44D /* Pods-HistoryMap.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = "HistoryMap/Supporting files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = darkmatter.com.HistoryMap;

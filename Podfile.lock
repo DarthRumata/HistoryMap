@@ -24,6 +24,8 @@ PODS:
   - Mapbox-iOS-SDK (3.3.0)
   - ObjectMapper (1.3.0)
   - ReSwift (2.0.0)
+  - ReSwiftRouter (0.3.0):
+    - ReSwift (~> 2.0)
 
 DEPENDENCIES:
   - Firebase (= 3.3.0)
@@ -31,6 +33,7 @@ DEPENDENCIES:
   - Mapbox-iOS-SDK (~> 3.3.0)
   - ObjectMapper (~> 1.3)
   - ReSwift (= 2.0.0)
+  - ReSwiftRouter
 
 SPEC CHECKSUMS:
   Firebase: 6250071f0e2440a5c4c67b8cb6b868f868237ac3
@@ -43,7 +46,8 @@ SPEC CHECKSUMS:
   Mapbox-iOS-SDK: 88171e67d043af5ba80f52bcbf5dd31478652c18
   ObjectMapper: 4eb08a726e9791a93b2632049951b56a7c17e471
   ReSwift: 7abc536a87955c34bf60de3fd32ce9a02ee3ad87
+  ReSwiftRouter: 78f913bd3621174ce7552e4d2addadb723109293
 
-PODFILE CHECKSUM: 8dc8a73ec690ed983105d94abf8314865a56cf80
+PODFILE CHECKSUM: a6db11a3bd231ece7ce2797a6ccc7ba3584ddddd
 
 COCOAPODS: 1.0.1

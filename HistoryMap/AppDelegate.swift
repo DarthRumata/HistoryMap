@@ -9,6 +9,7 @@
 import UIKit
 import ReSwift
 import Firebase
+import ReSwiftRouter
 
 let store = Store<AppState>(reducer: AppReducer(), state: nil)
 
@@ -16,13 +17,23 @@ let store = Store<AppState>(reducer: AppReducer(), state: nil)
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  var router: Router<AppState>!
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     FIRApp.configure()
 
-    let action = AddServiceAction(service: FirebaseService())
-    store.dispatch(action)
+    window = UIWindow(frame: UIScreen.mainScreen().bounds)
+
+    let rootRoutable = RootRoutable(window: window!)
+
+    router = Router(store: store, rootRoutable: rootRoutable) { state in
+      return state.navigationState
+    }
+
+    let setMainRouteAction = SetRouteAction([RouteElement.Map.rawValue])
+    store.dispatch(setMainRouteAction)
+
+    window!.makeKeyAndVisible()
 
     return true
   }
